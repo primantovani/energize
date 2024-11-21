@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energize - Arquitetura da Solução</title>
+    <link rel="icon" href="./assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/en.png" alt="Wireframe do Sistema" class="">
+        <nav>
+            <a href="index.html">Apresentação</a>
+            <a href="arquitetura.html">Arquitetura da Solução</a>
+            <a href="diagrama.html">Diagrama</a>
+            <a href="wireframe.html">Wireframe</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Principais Componentes da Arquitetura</h2>
+        
+            <h3>Interface do Usuário (Front-End)</h3>
+            <h4>Linguagens de Programação</h4>
+            <p>
+                O front-end é desenvolvido com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>, que são fundamentais para criar páginas estruturadas, estilizadas e interativas. Essas tecnologias permitem que a interface do usuário seja visualmente atraente e funcional, garantindo uma experiência intuitiva e responsiva.
+            </p>
+            <h4>Framework Front-End</h4>
+            <p>
+                <strong>React.js</strong> foi escolhido devido à sua capacidade de criar componentes reutilizáveis e interativos. Isso facilita a construção de dashboards com gráficos e tabelas para monitoramento da energia gerada e consumida.
+            </p>
+            <h4>Ferramenta de Desenvolvimento</h4>
+            <p>
+                O <strong>Visual Studio Code</strong> é utilizado como IDE, oferecendo suporte a extensões úteis para depuração, integração com controle de versão e análise de código. Ele é altamente personalizável, adaptando-se às necessidades específicas do projeto.
+            </p>
+        
+            <h3>Lógica do Sistema (Back-End)</h3>
+            <h4>Linguagem de Programação</h4>
+            <p>
+                <strong>Node.js</strong> é usado no servidor por sua alta escalabilidade e eficiência em lidar com múltiplas solicitações simultâneas, como os dados provenientes de dispositivos IoT.
+            </p>
+            <h4>Framework Back-End</h4>
+            <p>
+                O <strong>Express.js</strong> permite criar APIs para gerenciar e processar informações sobre geração de energia solar, consumo e economia de custos.
+            </p>
+            <h4>Banco de Dados</h4>
+            <p>
+                <strong>MongoDB</strong> foi escolhido como o banco de dados por sua flexibilidade em armazenar grandes volumes de dados estruturados e não estruturados. Ele é usado para:
+            </p>
+            <ul>
+                <li>Registrar dados de energia gerada e consumida.</li>
+                <li>Armazenar configurações dos dispositivos IoT conectados.</li>
+                <li>Salvar relatórios personalizados de economia e pegada de carbono.</li>
+            </ul>
+        
+            <h3>Segurança e Autenticação</h3>
+            <h4>Métodos de Segurança</h4>
+            <p>
+                A aplicação implementa login e cadastro com criptografia de senhas, garantindo a proteção dos dados do usuário. Além disso, a verificação por e-mail adiciona uma camada extra de segurança, validando a identidade de cada usuário antes do acesso ao sistema.
+            </p>
+        
+            <h3>Armazenamento em Nuvem com AWS S3</h3>
+            <p>
+                O sistema utiliza o <strong>AWS S3 (Amazon Simple Storage Service)</strong> como solução de armazenamento em nuvem, oferecendo escalabilidade, segurança e alta disponibilidade para os dados gerados e utilizados pela aplicação.
+            </p>
+            <h4>Principais Implementações do AWS S3</h4>
+            <ul>
+                <li>
+                    <strong>Armazenamento de Relatórios Personalizados:</strong> Relatórios mensais em formato PDF ou gráficos sobre energia gerada, consumo e economia financeira são salvos em buckets do S3. Os usuários podem acessar esses relatórios por meio de links gerados pela aplicação, garantindo facilidade de download.
+                </li>
+                <li>
+                    <strong>Distribuição de Conteúdo Multimídia:</strong> Arquivos como vídeos educativos e imagens utilizados na interface do sistema são armazenados no S3, garantindo acesso rápido e eficiente. A integração com o CloudFront melhora o desempenho na entrega de conteúdos em diferentes regiões.
+                </li>
+            </ul>
+        
+            <h3>Comunicação em Tempo Real</h3>
+            <h4>Tecnologia de Websockets</h4>
+            <p>
+                Para interações em tempo real, como chats ou atualizações dinâmicas, o sistema utiliza <strong>Websockets</strong>, permitindo uma comunicação bidirecional eficiente entre clientes e servidor. Essa abordagem melhora a responsividade e enriquece a experiência do usuário.
+            </p>
+        
+            <h3>Acessibilidade</h3>
+            <h4>Recursos de Inclusão</h4>
+            <p>O sistema foi projetado com recursos que garantem acessibilidade, como:</p>
+            <ul>
+                <li>Uso de tags semânticas HTML para melhorar a compatibilidade com leitores de tela.</li>
+                <li>Garantia de contrastes adequados entre texto e fundo para facilitar a leitura.</li>
+                <li>Adaptação do texto com tamanhos ajustáveis usando unidades relativas.</li>
+                <li>Inclusão de textos alternativos para imagens e legendas em conteúdos multimídia.</li>
+                <li>Testes regulares com leitores de tela para garantir total acessibilidade.</li>
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Autores: Gabriel Notari, Igor Vieira, João Vitor Pontes, Sophie Moreau e Priscila Mantovani</p>
+    </footer>
+</body>
+</html>
